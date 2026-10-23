@@ -1,13 +1,7 @@
-"""
-Experiment 6: Alpha-Beta Pruning
-Aim: To implement the Alpha-Beta Pruning algorithm for an adversarial search game tree using Python.
-"""
 import math
-
 def minimax(depth, node_index, is_max, scores, alpha, beta, max_depth):
     if depth == max_depth:
         return scores[node_index]
-
     if is_max:
         max_eval = -math.inf
         for i in range(2):
@@ -26,16 +20,15 @@ def minimax(depth, node_index, is_max, scores, alpha, beta, max_depth):
             if beta <= alpha:
                 break
         return min_eval
-
 if __name__ == '__main__':
-    scores = []
-    num_nodes = 8
-    print("Enter 8 leaf node values:")
-    for i in range(num_nodes):
-        val = int(input())
-        scores.append(val)
-
-    max_depth = int(math.log2(len(scores)))
-
-    optimal_value = minimax(0, 0, True, scores, -math.inf, math.inf, max_depth)
-    print("The optimal value is:", optimal_value)
+    scores_input = input("Enter 8 leaf node values separated by space: ")
+    scores = list(map(int, scores_input.split()))
+    if len(scores) != 8:
+        print("Error: Please enter exactly 8 values.")
+    else:
+        max_depth = int(math.log2(len(scores)))
+        optimal_value = minimax(0, 0, True, scores, -math.inf, math.inf, max_depth)
+        print("The optimal value is:", optimal_value)
+    """ OUTPUT: 
+    Enter 8 leaf node values separated by space: 3 5 6 9 1 2 0 -1
+    The optimal value is: 5 """
