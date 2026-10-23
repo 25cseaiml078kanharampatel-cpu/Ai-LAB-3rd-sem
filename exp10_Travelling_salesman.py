@@ -28,3 +28,13 @@ start = int(input("Enter the starting city(0 to {}): ".format(n-1)))
 cost, path = travelling_salesman(graph, start)
 print("\nOptimal Path:", " -> ".join(map(str, path)))
 print(f"Minimum cost: {cost}")
+""" OUTPUT:
+Enter the number of cities: 4
+Enter the matrix: 
+0 10 15 20
+10 0 35 25
+15 35 0 30
+20 25 30 0
+Enter the starting city(0 to 3): 0
+Optimal Path: 0 -> 1 -> 3 -> 2 -> 0
+Minimum cost: 80 """
