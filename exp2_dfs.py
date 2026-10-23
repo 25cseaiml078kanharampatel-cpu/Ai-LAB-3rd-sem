@@ -18,5 +18,6 @@ if __name__ == '__main__':
     visited = set()
     print("DFS Traversal order :", end=" ")
     dfs(visited, graph, 'a')
-  """  Following is the Breadth-First Search:
+  """OUTPUT:  
+  Following is the Breadth-First Search:
         A B C D E F """
