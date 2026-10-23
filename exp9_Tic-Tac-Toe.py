@@ -36,3 +36,14 @@ else:
   print("\nFinal Board:")
   print_board(board)
   print("Game Draw!")
+  """ OUTPUT:
+  Final Board: 
+X | X | X
+---------
+
+  | O |  
+---------
+
+  |   | O
+---------
+player X wins """
