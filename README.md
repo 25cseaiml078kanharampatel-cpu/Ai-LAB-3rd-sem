@@ -1,1 +1,1 @@
-# Ai-LAB-3rd-sem
+# Ai-LAB-3rd-SEM
